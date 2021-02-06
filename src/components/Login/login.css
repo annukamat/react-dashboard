@@ -1,0 +1,68 @@
+.container .brand {
+  color: #000;
+  font-weight: bold;
+  font-size: 25px;
+}
+.container .brand span {
+  color: blue;
+}
+
+.card {
+  border: none !important;
+}
+.left {
+  max-width: 400px !important;
+}
+.left h1 {
+  font-weight: bold;
+  margin-bottom: 0.5rem !important;
+}
+.left p {
+  text-align: center;
+  font-size: 14px;
+  color: #596470;
+  font-weight: bold;
+  margin-bottom: 2.5rem !important;
+}
+.left p span {
+  color: blue;
+}
+.left .form-label {
+  color: #777;
+  font-size: 12px;
+  margin-bottom: 0 !important;
+}
+.left .form-control {
+  background-color: #e7eaee;
+  border: 1px solid #e7eaee;
+}
+.left .btn {
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+.left .bottom-text {
+  font-size: 12px;
+  color: #777;
+  margin-top: 0 !important;
+}
+
+.right {
+  /* border: 1px solid yellow; */
+  margin: auto;
+  background-color: #7c88e7;
+}
+.right img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 70%;
+  height: auto;
+}
+.right p {
+  color: rgba(255, 255, 255, 0.959);
+  font-size: 10px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
