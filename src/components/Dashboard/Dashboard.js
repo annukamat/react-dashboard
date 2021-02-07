@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Card,
   CardText,
@@ -11,6 +11,8 @@ import {
   Input,
   CardImg,
 } from 'reactstrap';
+import { useAuth } from '../../context/AuthContext';
+import { Link, useHistory } from 'react-router-dom';
 import Navbar from '../Navbar/navbar';
 import './dashboard.css';
 import profileImg from '../../Assets/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg';
@@ -20,9 +22,30 @@ import yt from '../../Assets/youtube-organization-area-symbol-wordcamp-israel.jp
 import ins from '../../Assets/63cb74c62c563351d1fbac26edf3416c.jpg';
 
 export default function Dashboard() {
+  const [error, setError] = useState('');
+  const { currentUser, logout } = useAuth();
+  const history = useHistory();
+
+  async function handleLogout() {
+    setError('');
+
+    try {
+      await logout();
+      history.push('/login');
+    } catch {
+      setError('Failed to log out');
+    }
+  }
+
   return (
     <div className="header mt-1" style={{ minHeight: '100vh' }}>
       <Navbar />
+      <div className="logout-btn">
+        {error && <Alert variant="danger">{error}</Alert>}
+        <Button variant="link" onClick={handleLogout}>
+          Log Out
+        </Button>
+      </div>
       <div className="container hero">
         <div className="row">
           <div className="col-sm col-md-3">

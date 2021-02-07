@@ -1,7 +1,18 @@
+.logout-btn {
+  position: absolute;
+  top: 3.5%;
+  left: 85%;
+}
+.logout-btn button {
+  color: rgba(206, 7, 7, 0.897);
+  background-color: rgba(250, 250, 250, 0.137);
+  border: none;
+  font-weight: bold;
+}
+
 .container .row .col-sm {
   padding-top: 2em;
   padding-bottom: 2em;
-
   background-color: rgb(227, 237, 241);
 }
 .card {

@@ -2,6 +2,10 @@
   background-color: #fff;
 }
 
+.navbar .navbar-nav {
+  margin-right: 4.5rem;
+}
+
 .navbar .navbar-brand {
   font-weight: bolder;
 }
